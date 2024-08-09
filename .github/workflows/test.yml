@@ -9,18 +9,4 @@ jobs:
         uses: actions/checkout@master
       - name: macOS test
         run: |
-#          'Library/Application Support/VMWare Tools/vmware-resolutionSet' 2560 1440
-#          sleep 5
           defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-          sleep 5
-          system_profiler SPDisplaysDataType | grep Resolution
-          # xcodebuild test -destination platform="macOS" -scheme "SkeletonUISnapshotTests"
-#      - name: tvOS test
-#        run: |
-#          xcodebuild test -destination 'platform=tvOS Simulator,name=Apple TV,OS=17.5' -scheme 'SkeletonUI'
-#      - name: tvOS 4k test
-#        run: |
-#          xcodebuild test -destination 'platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=17.5' -scheme 'SkeletonUI'
-#      - name: iOS test
-#        run: |
-#          xcodebuild test -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5' -scheme 'SkeletonUI'
