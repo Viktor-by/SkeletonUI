@@ -11,6 +11,6 @@ jobs:
         run: |
           # TODO: @CSolanaM macOS tests not passing because CI screen scale factor is 1, local is 2
           # xcodebuild test -destination platform="macOS" -scheme "SkeletonUISnapshotTests"
-          xcodebuild test -destination 'platform=tvOS Simulator,name=Apple TV,OS=17.5' -scheme 'SkeletonUI' | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild test -destination 'platform=tvOS Simulator,name=Apple TV,OS=17.5' -scheme 'SkeletonUI'
           xcodebuild test -destination 'platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=17.5' -scheme 'SkeletonUI' | xcpretty && exit ${PIPESTATUS[0]}
           xcodebuild test -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5' -scheme 'SkeletonUI' | xcpretty && exit ${PIPESTATUS[0]}
