@@ -130,7 +130,7 @@ final class SnapshotTests: XCTestCase {
     }
 
     func testLoadingSkeletonForEach() {
-        let view = SkeletonList(with: [String]()) { loading, item in
+        let view = SkeletonForEach(with: [String]()) { loading, item in
             Text(item).skeleton(with: loading)
         }
         assertNamedSnapshot(matching: view, as: .image(size: CGSize(width: 100, height: 25)))
