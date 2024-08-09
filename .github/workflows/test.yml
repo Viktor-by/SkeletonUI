@@ -9,9 +9,8 @@ jobs:
         uses: actions/checkout@master
       - name: macOS test
         run: |
-          # TODO: @CSolanaM macOS tests not passing because CI screen scale factor is 1, local is 2
 #          system_profiler SPDisplaysDataType | grep Resolution
-          "Library/Application Support/VMWare Tools/vmware-resolutionSet" 2560 1440
+          'Library/Application Support/VMWare Tools/vmware-resolutionSet' 2560 1440
           sleep 5
           defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
           sleep 5
