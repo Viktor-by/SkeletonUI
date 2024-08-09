@@ -10,8 +10,8 @@ jobs:
       - name: macOS test
         run: |
           sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-          sleep 5
-          system_profiler SPDisplaysDataType | grep Resolution
+#          sleep 5
+#          system_profiler SPDisplaysDataType | grep Resolution
           xcodebuild test -destination platform="macOS" -scheme "SkeletonUI"
       - name: tvOS test
         run: |
