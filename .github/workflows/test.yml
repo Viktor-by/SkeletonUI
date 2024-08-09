@@ -13,7 +13,4 @@ jobs:
           # xcodebuild test -destination platform="macOS" -scheme "SkeletonUISnapshotTests"
           # xcodebuild test -destination name="Apple TV" -scheme "SkeletonUISnapshotTests"
           # xcodebuild test -destination name="Apple TV 4K (3rd generation)" -scheme "SkeletonUISnapshotTests"
-#          xcodebuild test -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5' -scheme "SkeletonUISnapshotTests" | xcpretty && exit ${PIPESTATUS[0]}
           xcodebuild test -destination name="iPhone 8" -scheme "SkeletonUISnapshotTests" | xcpretty && exit ${PIPESTATUS[0]}
-#          xcodebuild test -destination name="iPhone 14 Pro Max" -scheme "SkeletonUISnapshotTests" | xcpretty && exit ${PIPESTATUS[0]}
-#          xcodebuild test -destination name="iPad Pro (12.9-inch) (6th generation)" -scheme "SkeletonUISnapshotTests" | xcpretty && exit ${PIPESTATUS[0]}
